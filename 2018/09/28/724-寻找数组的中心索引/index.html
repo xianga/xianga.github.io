@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="123456789101112131415161718public int smallestRangeI(int[] A, int K) &amp;#123;    int max = Integer.MIN_VALUE;    int min = Integer.MAX_VALUE;    for (int i = 0; i &amp;lt; A.length; i++) &amp;#123;        if(A[">
+  <meta name="description" content="思路：因为索引左右两边相等，即总和=左边*2+索引本身的值12345678910111213public int pivotIndex(int[] nums) &amp;#123;    int sum = 0;    for (int i = 0; i &amp;lt; nums.length; i++) &amp;#123;        sum += nums[i];    &amp;#125;    int t = 0;">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 908.最小差值I">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/24/908.最小差值I/index.html">
+<meta property="og:title" content="LeetCode &quot;724.寻找数组的中心索引&quot;">
+<meta property="og:url" content="http://www.sy0709.com/2018/09/28/724-寻找数组的中心索引/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="123456789101112131415161718public int smallestRangeI(int[] A, int K) &amp;#123;    int max = Integer.MIN_VALUE;    int min = Integer.MAX_VALUE;    for (int i = 0; i &amp;lt; A.length; i++) &amp;#123;        if(A[">
+<meta property="og:description" content="思路：因为索引左右两边相等，即总和=左边*2+索引本身的值12345678910111213public int pivotIndex(int[] nums) &amp;#123;    int sum = 0;    for (int i = 0; i &amp;lt; nums.length; i++) &amp;#123;        sum += nums[i];    &amp;#125;    int t = 0;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-24T14:12:09.169Z">
+<meta property="og:updated_time" content="2018-09-28T14:06:19.719Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 908.最小差值I">
-<meta name="twitter:description" content="123456789101112131415161718public int smallestRangeI(int[] A, int K) &amp;#123;    int max = Integer.MIN_VALUE;    int min = Integer.MAX_VALUE;    for (int i = 0; i &amp;lt; A.length; i++) &amp;#123;        if(A[">
+<meta name="twitter:title" content="LeetCode &quot;724.寻找数组的中心索引&quot;">
+<meta name="twitter:description" content="思路：因为索引左右两边相等，即总和=左边*2+索引本身的值12345678910111213public int pivotIndex(int[] nums) &amp;#123;    int sum = 0;    for (int i = 0; i &amp;lt; nums.length; i++) &amp;#123;        sum += nums[i];    &amp;#125;    int t = 0;">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/24/908.最小差值I/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/09/28/724-寻找数组的中心索引/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode 908.最小差值I | xianga</title>
+  <title>LeetCode "724.寻找数组的中心索引" | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/24/908.最小差值I/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/28/724-寻找数组的中心索引/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode 908.最小差值I
+          <h1 class="post-title" itemprop="name headline">LeetCode "724.寻找数组的中心索引"
               
             
           </h1>
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="创建时间：2018-09-24 22:11:23 / 修改时间：22:12:09" itemprop="dateCreated datePublished" datetime="2018-09-24T22:11:23+08:00">2018-09-24</time>
+              <time title="创建时间：2018-09-28 22:05:07 / 修改时间：22:06:19" itemprop="dateCreated datePublished" datetime="2018-09-28T22:05:07+08:00">2018-09-28</time>
             
 
             
@@ -381,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">462</span>
+                <span title="本文字数">361</span>
               
 
               
@@ -415,7 +415,8 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">smallestRangeI</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">int</span> min = Integer.MAX_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; max)&#123;</span><br><span class="line">            max = A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &lt; min)&#123;</span><br><span class="line">            min = A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(min + <span class="number">2</span> * K &gt;= max)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> max - min - <span class="number">2</span> * K;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>思路：因为索引左右两边相等，即总和=左边*2+索引本身的值<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pivotIndex</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(t * <span class="number">2</span> + nums[i] == sum)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        t = t + nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -448,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/23/861-翻转矩阵后的得分/" rel="next" title="LeetCode 861.翻转矩阵后的得分">
-                <i class="fa fa-chevron-left"></i> LeetCode 861.翻转矩阵后的得分
+              <a href="/2018/09/27/374-猜数字大小/" rel="next" title="LeetCode 374.猜数字大小">
+                <i class="fa fa-chevron-left"></i> LeetCode 374.猜数字大小
               </a>
             
           </div>
@@ -457,10 +458,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/27/374-猜数字大小/" rel="prev" title="LeetCode 374.猜数字大小">
-                LeetCode 374.猜数字大小 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
