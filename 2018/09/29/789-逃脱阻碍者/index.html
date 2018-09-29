@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="123456789101112131415161718public int reverse(int x) &amp;#123;        int flag = 1;        long res = 0;        if(x&amp;lt;0)&amp;#123;            flag = -1;            x = flag * x;        &amp;#125;        while(">
+  <meta name="description" content="123456789public boolean escapeGhosts(int[][] ghosts, int[] target) &amp;#123;    int step = Math.abs(target[0]) + Math.abs(target[1]);    for (int i = 0; i &amp;lt; ghosts.length; i++) &amp;#123;        int s = M">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 7.反转整数">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/23/7-反转整数/index.html">
+<meta property="og:title" content="LeetCode &quot;789.逃脱阻碍者&quot;">
+<meta property="og:url" content="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="123456789101112131415161718public int reverse(int x) &amp;#123;        int flag = 1;        long res = 0;        if(x&amp;lt;0)&amp;#123;            flag = -1;            x = flag * x;        &amp;#125;        while(">
+<meta property="og:description" content="123456789public boolean escapeGhosts(int[][] ghosts, int[] target) &amp;#123;    int step = Math.abs(target[0]) + Math.abs(target[1]);    for (int i = 0; i &amp;lt; ghosts.length; i++) &amp;#123;        int s = M">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-23T08:04:19.856Z">
+<meta property="og:updated_time" content="2018-09-29T14:32:43.544Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 7.反转整数">
-<meta name="twitter:description" content="123456789101112131415161718public int reverse(int x) &amp;#123;        int flag = 1;        long res = 0;        if(x&amp;lt;0)&amp;#123;            flag = -1;            x = flag * x;        &amp;#125;        while(">
+<meta name="twitter:title" content="LeetCode &quot;789.逃脱阻碍者&quot;">
+<meta name="twitter:description" content="123456789public boolean escapeGhosts(int[][] ghosts, int[] target) &amp;#123;    int step = Math.abs(target[0]) + Math.abs(target[1]);    for (int i = 0; i &amp;lt; ghosts.length; i++) &amp;#123;        int s = M">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/23/7-反转整数/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode 7.反转整数 | xianga</title>
+  <title>LeetCode "789.逃脱阻碍者" | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/7-反转整数/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode 7.反转整数
+          <h1 class="post-title" itemprop="name headline">LeetCode "789.逃脱阻碍者"
               
             
           </h1>
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 15:37:11 / 修改时间：16:04:19" itemprop="dateCreated datePublished" datetime="2018-09-23T15:37:11+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-29 22:32:27 / 修改时间：22:32:43" itemprop="dateCreated datePublished" datetime="2018-09-29T22:32:27+08:00">2018-09-29</time>
             
 
             
@@ -381,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">482</span>
+                <span title="本文字数">340</span>
               
 
               
@@ -415,7 +415,7 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> flag = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            flag = -<span class="number">1</span>;</span><br><span class="line">            x = flag * x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(x &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            res = res * <span class="number">10</span> + x %<span class="number">10</span>;</span><br><span class="line">            x = x /<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        res = flag * res;</span><br><span class="line">        <span class="keyword">if</span>(res &gt; Integer.MAX_VALUE || res &lt; Integer.MIN_VALUE)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)res;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">escapeGhosts</span><span class="params">(<span class="keyword">int</span>[][] ghosts, <span class="keyword">int</span>[] target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> step = Math.abs(target[<span class="number">0</span>]) + Math.abs(target[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ghosts.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> s = Math.abs(ghosts[i][<span class="number">0</span>] - target[<span class="number">0</span>]) + Math.abs(ghosts[i][<span class="number">1</span>] - target[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(s &lt; step) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -448,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/23/1-两数之和/" rel="next" title="LeetCode 1.两数之和">
-                <i class="fa fa-chevron-left"></i> LeetCode 1.两数之和
+              <a href="/2018/09/29/532-数组中的K-diff数对/" rel="next" title="LeetCode "532.数组中的K-diff数对"">
+                <i class="fa fa-chevron-left"></i> LeetCode "532.数组中的K-diff数对"
               </a>
             
           </div>
@@ -457,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/23/107-二叉树的层次遍历II/" rel="prev" title="LeetCode 107.二叉树的层次遍历II">
-                LeetCode 107.二叉树的层次遍历II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
