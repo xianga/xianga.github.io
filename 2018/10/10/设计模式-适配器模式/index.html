@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="12345678910111213141516171819202122232425262728293031public boolean isToeplitzMatrix(int[][] matrix) &amp;#123;    if(matrix == null)        throw new IllegalArgumentException();    int row = matrix.lengt">
-<meta name="keywords" content="LeetCode">
+  <meta name="description" content="什么是适配器模式适配器模式的要素 目标(Target)：客户需要的接口 被适配者(Adaptee)：现有的接口 适配器(Adapter)：将现有的接口转换成目标接口适配器的分类 类适配器：通过类实现接口的方式完成适配 1234567891011public class Adaptee &amp;#123;    public void doSomeThing()&amp;#123;...&amp;#125;&amp;#125;p">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 766.托普利茨矩阵">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/23/766-托普利茨矩阵/index.html">
+<meta property="og:title" content="设计模式-适配器模式">
+<meta property="og:url" content="http://www.sy0709.com/2018/10/10/设计模式-适配器模式/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031public boolean isToeplitzMatrix(int[][] matrix) &amp;#123;    if(matrix == null)        throw new IllegalArgumentException();    int row = matrix.lengt">
+<meta property="og:description" content="什么是适配器模式适配器模式的要素 目标(Target)：客户需要的接口 被适配者(Adaptee)：现有的接口 适配器(Adapter)：将现有的接口转换成目标接口适配器的分类 类适配器：通过类实现接口的方式完成适配 1234567891011public class Adaptee &amp;#123;    public void doSomeThing()&amp;#123;...&amp;#125;&amp;#125;p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-23T16:06:54.381Z">
+<meta property="og:updated_time" content="2018-10-10T13:11:36.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 766.托普利茨矩阵">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031public boolean isToeplitzMatrix(int[][] matrix) &amp;#123;    if(matrix == null)        throw new IllegalArgumentException();    int row = matrix.lengt">
+<meta name="twitter:title" content="设计模式-适配器模式">
+<meta name="twitter:description" content="什么是适配器模式适配器模式的要素 目标(Target)：客户需要的接口 被适配者(Adaptee)：现有的接口 适配器(Adapter)：将现有的接口转换成目标接口适配器的分类 类适配器：通过类实现接口的方式完成适配 1234567891011public class Adaptee &amp;#123;    public void doSomeThing()&amp;#123;...&amp;#125;&amp;#125;p">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/23/766-托普利茨矩阵/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/10/10/设计模式-适配器模式/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode 766.托普利茨矩阵 | xianga</title>
+  <title>设计模式-适配器模式 | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/766-托普利茨矩阵/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/10/设计模式-适配器模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode 766.托普利茨矩阵
+          <h2 class="post-title" itemprop="name headline">设计模式-适配器模式
               
             
           </h2>
@@ -341,24 +341,12 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:19:16" itemprop="dateCreated datePublished" datetime="2018-09-23T16:19:16+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-10 20:28:53 / 修改时间：21:11:36" itemprop="dateCreated datePublished" datetime="2018-10-10T20:28:53+08:00">2018-10-10</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-24 00:06:54" itemprop="dateModified" datetime="2018-09-24T00:06:54+08:00">2018-09-24</time>
               
             
           </span>
@@ -393,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">836</span>
+                <span title="本文字数">762</span>
               
 
               
@@ -427,7 +415,19 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isToeplitzMatrix</span><span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(matrix == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">    <span class="keyword">int</span> row = matrix.length;</span><br><span class="line">    <span class="keyword">int</span> col = matrix[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span> x ,y;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; col; i++) &#123;</span><br><span class="line">        x = <span class="number">0</span>;</span><br><span class="line">        y = i;</span><br><span class="line">        <span class="keyword">while</span>(x &lt; row-<span class="number">1</span> &amp;&amp; y &lt; col-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(matrix[x][y] != matrix[x+<span class="number">1</span>][y+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            x++;</span><br><span class="line">            y++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        x = i;</span><br><span class="line">        y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x &lt; row-<span class="number">1</span> &amp;&amp; y &lt; col-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(matrix[x][y] != matrix[x+<span class="number">1</span>][y+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            x++;</span><br><span class="line">            y++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h4 id="什么是适配器模式"><a href="#什么是适配器模式" class="headerlink" title="什么是适配器模式"></a>什么是适配器模式</h4><h4 id="适配器模式的要素"><a href="#适配器模式的要素" class="headerlink" title="适配器模式的要素"></a>适配器模式的要素</h4><ul>
+<li>目标(Target)：客户需要的接口</li>
+<li>被适配者(Adaptee)：现有的接口</li>
+<li>适配器(Adapter)：将现有的接口转换成目标接口<h4 id="适配器的分类"><a href="#适配器的分类" class="headerlink" title="适配器的分类"></a>适配器的分类</h4></li>
+<li><p>类适配器：通过类实现接口的方式完成适配</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomeThing</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">do</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">extends</span> <span class="title">Adaptee</span> <span class="keyword">implements</span> <span class="title">Target</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">do</span><span class="params">()</span></span>&#123;</span><br><span class="line">        doSomeThing();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象适配器：通过组合被适配者的对象完成适配</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomeThing</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">do</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">implements</span> <span class="title">Target</span></span>&#123;</span><br><span class="line">    Adaptee adaptee = <span class="keyword">new</span> Adaptee();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">do</span><span class="params">()</span></span>&#123;</span><br><span class="line">        adaptee.doSomeThing();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="什么时候使用适配器模式"><a href="#什么时候使用适配器模式" class="headerlink" title="什么时候使用适配器模式"></a>什么时候使用适配器模式</h4><p>当现有的接口不满足需要，又不好修改现在接口时，使用适配器模式对现有接口进行包装使用。</p>
+
       
     </div>
 
@@ -447,7 +447,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
         </div>
       
@@ -460,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/23/746-使用最小花费爬楼梯/" rel="next" title="LeetCode 746.使用最小花费爬楼梯">
-                <i class="fa fa-chevron-left"></i> LeetCode 746.使用最小花费爬楼梯
+              <a href="/2018/10/10/17-电话号码的字母组合/" rel="next" title="LeetCode 17.电话号码的字母组合">
+                <i class="fa fa-chevron-left"></i> LeetCode 17.电话号码的字母组合
               </a>
             
           </div>
@@ -469,10 +469,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/23/860-柠檬水找零/" rel="prev" title="LeetCode 860.柠檬水找零">
-                LeetCode 860.柠檬水找零 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -517,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -587,6 +592,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是适配器模式"><span class="nav-number">1.</span> <span class="nav-text">什么是适配器模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#适配器模式的要素"><span class="nav-number">2.</span> <span class="nav-text">适配器模式的要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#适配器的分类"><span class="nav-number">3.</span> <span class="nav-text">适配器的分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候使用适配器模式"><span class="nav-number">4.</span> <span class="nav-text">什么时候使用适配器模式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
