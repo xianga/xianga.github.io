@@ -108,25 +108,24 @@
 
 
 
-  <meta name="description" content="123456789101112131415161718192021222324public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;    int count = 0;    Map&amp;lt;Integer,Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;();">
-<meta name="keywords" content="LeetCode">
+  <meta name="description" content="什么是外观模式外观模式就是将子系统的一系列接口集成起来，形成一个统一的接口向外开放； 外观模式的意义提供统一接口，忽略子系统的细节； 不太理解外观模式的具体应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 454.四数相加II">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/30/454-四数相加II/index.html">
+<meta property="og:title" content="设计模式-外观模式">
+<meta property="og:url" content="http://www.sy0709.com/2018/10/11/设计模式-外观模式/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="123456789101112131415161718192021222324public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;    int count = 0;    Map&amp;lt;Integer,Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;();">
+<meta property="og:description" content="什么是外观模式外观模式就是将子系统的一系列接口集成起来，形成一个统一的接口向外开放； 外观模式的意义提供统一接口，忽略子系统的细节； 不太理解外观模式的具体应用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-30T11:24:32.104Z">
+<meta property="og:updated_time" content="2018-10-11T12:40:26.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 454.四数相加II">
-<meta name="twitter:description" content="123456789101112131415161718192021222324public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;    int count = 0;    Map&amp;lt;Integer,Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;();">
+<meta name="twitter:title" content="设计模式-外观模式">
+<meta name="twitter:description" content="什么是外观模式外观模式就是将子系统的一系列接口集成起来，形成一个统一的接口向外开放； 外观模式的意义提供统一接口，忽略子系统的细节； 不太理解外观模式的具体应用">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/30/454-四数相加II/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/10/11/设计模式-外观模式/"/>
 
 
 
@@ -136,7 +135,7 @@
   };
 </script>
 
-  <title>LeetCode 454.四数相加II | xianga</title>
+  <title>设计模式-外观模式 | xianga</title>
   
 
 
@@ -299,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/30/454-四数相加II/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/11/设计模式-外观模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +315,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode 454.四数相加II
+          <h2 class="post-title" itemprop="name headline">设计模式-外观模式
               
             
           </h2>
@@ -341,7 +340,7 @@
                 
               
 
-              <time title="创建时间：2018-09-30 19:23:59 / 修改时间：19:24:32" itemprop="dateCreated datePublished" datetime="2018-09-30T19:23:59+08:00">2018-09-30</time>
+              <time title="创建时间：2018-10-11 20:34:36 / 修改时间：20:40:26" itemprop="dateCreated datePublished" datetime="2018-10-11T20:34:36+08:00">2018-10-11</time>
             
 
             
@@ -381,7 +380,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">799</span>
+                <span title="本文字数">81</span>
               
 
               
@@ -415,7 +414,10 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">fourSumCount</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B, <span class="keyword">int</span>[] C, <span class="keyword">int</span>[] D)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(A[i] + B[j]))&#123;</span><br><span class="line">                map.put(A[i] +B[j],map.get(A[i] +B[j])+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(A[i]+B[j],<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> t = C[i] + D[j];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(-t))&#123;</span><br><span class="line">                count = count + map.get(-t);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h4 id="什么是外观模式"><a href="#什么是外观模式" class="headerlink" title="什么是外观模式"></a>什么是外观模式</h4><p>外观模式就是将子系统的一系列接口集成起来，形成一个统一的接口向外开放；</p>
+<h4 id="外观模式的意义"><a href="#外观模式的意义" class="headerlink" title="外观模式的意义"></a>外观模式的意义</h4><p>提供统一接口，忽略子系统的细节；</p>
+<p><strong>不太理解外观模式的具体应用</strong></p>
+
       
     </div>
 
@@ -433,12 +435,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
-          
-        </div>
-      
 
       
       
@@ -448,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/30/914-卡片分组/" rel="next" title="LeetCode 914.卡片分组">
-                <i class="fa fa-chevron-left"></i> LeetCode 914.卡片分组
+              <a href="/2018/10/10/设计模式-适配器模式/" rel="next" title="设计模式-适配器模式">
+                <i class="fa fa-chevron-left"></i> 设计模式-适配器模式
               </a>
             
           </div>
@@ -457,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/07/917-仅仅反转字母/" rel="prev" title="LeetCode 917.仅仅反转字母">
-                LeetCode 917.仅仅反转字母 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -505,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -575,6 +576,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是外观模式"><span class="nav-number">1.</span> <span class="nav-text">什么是外观模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#外观模式的意义"><span class="nav-number">2.</span> <span class="nav-text">外观模式的意义</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
