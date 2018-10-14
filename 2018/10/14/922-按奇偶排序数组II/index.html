@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="123456789101112131415161718192021222324public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;    int count = 0;    Map&amp;lt;Integer,Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;();">
+  <meta name="description" content="1234567891011121314151617public int[] sortArrayByParityII(int[] A) &amp;#123;    int a =0,b=1;    while (a &amp;lt; A.length &amp;amp;&amp;amp; b &amp;lt; A.length)&amp;#123;        while(a&amp;lt;A.length &amp;amp;&amp;amp; (A[a] &amp;amp;">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 454.四数相加II">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/30/454-四数相加II/index.html">
+<meta property="og:title" content="LeetCode 922.按奇偶排序数组II">
+<meta property="og:url" content="http://www.sy0709.com/2018/10/14/922-按奇偶排序数组II/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="123456789101112131415161718192021222324public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;    int count = 0;    Map&amp;lt;Integer,Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;();">
+<meta property="og:description" content="1234567891011121314151617public int[] sortArrayByParityII(int[] A) &amp;#123;    int a =0,b=1;    while (a &amp;lt; A.length &amp;amp;&amp;amp; b &amp;lt; A.length)&amp;#123;        while(a&amp;lt;A.length &amp;amp;&amp;amp; (A[a] &amp;amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-30T11:24:32.104Z">
+<meta property="og:updated_time" content="2018-10-14T02:29:14.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 454.四数相加II">
-<meta name="twitter:description" content="123456789101112131415161718192021222324public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;    int count = 0;    Map&amp;lt;Integer,Integer&amp;gt; map = new HashMap&amp;lt;Integer, Integer&amp;gt;();">
+<meta name="twitter:title" content="LeetCode 922.按奇偶排序数组II">
+<meta name="twitter:description" content="1234567891011121314151617public int[] sortArrayByParityII(int[] A) &amp;#123;    int a =0,b=1;    while (a &amp;lt; A.length &amp;amp;&amp;amp; b &amp;lt; A.length)&amp;#123;        while(a&amp;lt;A.length &amp;amp;&amp;amp; (A[a] &amp;amp;">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/30/454-四数相加II/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/10/14/922-按奇偶排序数组II/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode 454.四数相加II | xianga</title>
+  <title>LeetCode 922.按奇偶排序数组II | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/30/454-四数相加II/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/14/922-按奇偶排序数组II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode 454.四数相加II
+          <h2 class="post-title" itemprop="name headline">LeetCode 922.按奇偶排序数组II
               
             
           </h2>
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="创建时间：2018-09-30 19:23:59 / 修改时间：19:24:32" itemprop="dateCreated datePublished" datetime="2018-09-30T19:23:59+08:00">2018-09-30</time>
+              <time title="创建时间：2018-10-14 10:29:00 / 修改时间：10:29:14" itemprop="dateCreated datePublished" datetime="2018-10-14T10:29:00+08:00">2018-10-14</time>
             
 
             
@@ -381,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">799</span>
+                <span title="本文字数">511</span>
               
 
               
@@ -415,7 +415,7 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">fourSumCount</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B, <span class="keyword">int</span>[] C, <span class="keyword">int</span>[] D)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(A[i] + B[j]))&#123;</span><br><span class="line">                map.put(A[i] +B[j],map.get(A[i] +B[j])+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(A[i]+B[j],<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> t = C[i] + D[j];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(-t))&#123;</span><br><span class="line">                count = count + map.get(-t);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] sortArrayByParityII(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">    <span class="keyword">int</span> a =<span class="number">0</span>,b=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (a &lt; A.length &amp;&amp; b &lt; A.length)&#123;</span><br><span class="line">        <span class="keyword">while</span>(a&lt;A.length &amp;&amp; (A[a] &amp; <span class="number">1</span> )== <span class="number">0</span>)&#123;</span><br><span class="line">            a+=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(b&lt;A.length &amp;&amp; (A[b] &amp; <span class="number">1</span> )== <span class="number">1</span>)&#123;</span><br><span class="line">            b+=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a&lt;A.length &amp;&amp; b&lt;A.length)&#123;</span><br><span class="line">            <span class="keyword">int</span> t = A[a];</span><br><span class="line">            A[a] = A[b];</span><br><span class="line">            A[b] = t;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> A;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -448,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/30/914-卡片分组/" rel="next" title="LeetCode 914.卡片分组">
-                <i class="fa fa-chevron-left"></i> LeetCode 914.卡片分组
+              <a href="/2018/10/11/设计模式-外观模式/" rel="next" title="设计模式-外观模式">
+                <i class="fa fa-chevron-left"></i> 设计模式-外观模式
               </a>
             
           </div>
@@ -458,8 +458,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/07/917-仅仅反转字母/" rel="prev" title="LeetCode 917.仅仅反转字母">
-                LeetCode 917.仅仅反转字母 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/14/921-使括号有效的最少添加/" rel="prev" title="LeetCode 921.使括号有效的最少添加">
+                LeetCode 921.使括号有效的最少添加 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
