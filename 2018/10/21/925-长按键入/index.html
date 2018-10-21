@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="123456789public boolean escapeGhosts(int[][] ghosts, int[] target) &amp;#123;    int step = Math.abs(target[0]) + Math.abs(target[1]);    for (int i = 0; i &amp;lt; ghosts.length; i++) &amp;#123;        int s = M">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930public boolean isLongPressedName(String name, String typed) &amp;#123;    if(name.length() == 0 &amp;amp;&amp;amp; typed.length() == 0) &amp;#123;        return true">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-789.逃脱阻碍者">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/index.html">
+<meta property="og:title" content="LeetCode-&quot;925.长按键入&quot;">
+<meta property="og:url" content="http://www.sy0709.com/2018/10/21/925-长按键入/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="123456789public boolean escapeGhosts(int[][] ghosts, int[] target) &amp;#123;    int step = Math.abs(target[0]) + Math.abs(target[1]);    for (int i = 0; i &amp;lt; ghosts.length; i++) &amp;#123;        int s = M">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930public boolean isLongPressedName(String name, String typed) &amp;#123;    if(name.length() == 0 &amp;amp;&amp;amp; typed.length() == 0) &amp;#123;        return true">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-18T13:30:41.336Z">
+<meta property="og:updated_time" content="2018-10-21T03:02:12.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-789.逃脱阻碍者">
-<meta name="twitter:description" content="123456789public boolean escapeGhosts(int[][] ghosts, int[] target) &amp;#123;    int step = Math.abs(target[0]) + Math.abs(target[1]);    for (int i = 0; i &amp;lt; ghosts.length; i++) &amp;#123;        int s = M">
+<meta name="twitter:title" content="LeetCode-&quot;925.长按键入&quot;">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930public boolean isLongPressedName(String name, String typed) &amp;#123;    if(name.length() == 0 &amp;amp;&amp;amp; typed.length() == 0) &amp;#123;        return true">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/10/21/925-长按键入/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode-789.逃脱阻碍者 | xianga</title>
+  <title>LeetCode-"925.长按键入" | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/21/925-长按键入/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode-789.逃脱阻碍者
+          <h2 class="post-title" itemprop="name headline">LeetCode-"925.长按键入"
               
             
           </h2>
@@ -341,24 +341,12 @@
                 
               
 
-              <time title="创建时间：2018-09-29 22:32:27" itemprop="dateCreated datePublished" datetime="2018-09-29T22:32:27+08:00">2018-09-29</time>
+              <time title="创建时间：2018-10-21 11:00:15 / 修改时间：11:02:12" itemprop="dateCreated datePublished" datetime="2018-10-21T11:00:15+08:00">2018-10-21</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-18 21:30:41" itemprop="dateModified" datetime="2018-10-18T21:30:41+08:00">2018-10-18</time>
               
             
           </span>
@@ -393,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">340</span>
+                <span title="本文字数">933</span>
               
 
               
@@ -427,7 +415,7 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">escapeGhosts</span><span class="params">(<span class="keyword">int</span>[][] ghosts, <span class="keyword">int</span>[] target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> step = Math.abs(target[<span class="number">0</span>]) + Math.abs(target[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ghosts.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> s = Math.abs(ghosts[i][<span class="number">0</span>] - target[<span class="number">0</span>]) + Math.abs(ghosts[i][<span class="number">1</span>] - target[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(s &lt; step) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLongPressedName</span><span class="params">(String name, String typed)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(name.length() == <span class="number">0</span> &amp;&amp; typed.length() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(name.length() &gt; typed.length())&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;name.length() &amp;&amp; j &lt; typed.length())&#123;</span><br><span class="line">        <span class="keyword">char</span> t = name.charAt(i);</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;name.length() &amp;&amp; name.charAt(i) == t)&#123;</span><br><span class="line">            i++;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> tcount = <span class="number">0</span>;</span><br><span class="line">        t = typed.charAt(j);</span><br><span class="line">        <span class="keyword">while</span>(j&lt;typed.length() &amp;&amp; typed.charAt(j) == t)&#123;</span><br><span class="line">            j++;</span><br><span class="line">            tcount++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(count &gt; tcount)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(i != name.length() &amp;&amp; j == typed.length())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -460,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/29/532-数组中的K-diff数对/" rel="next" title="LeetCode-532.数组中的K-diff数对">
-                <i class="fa fa-chevron-left"></i> LeetCode-532.数组中的K-diff数对
+              <a href="/2018/10/18/设计模式-组合模式/" rel="next" title="设计模式-组合模式">
+                <i class="fa fa-chevron-left"></i> 设计模式-组合模式
               </a>
             
           </div>
@@ -469,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/30/914-卡片分组/" rel="prev" title="LeetCode-914.卡片分组">
-                LeetCode-914.卡片分组 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
