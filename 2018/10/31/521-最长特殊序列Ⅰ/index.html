@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="12345678910public boolean isSameTree(TreeNode p, TreeNode q) &amp;#123;    return isSame(p,q);&amp;#125;private boolean isSame(TreeNode p, TreeNode q) &amp;#123;    if(p == null &amp;amp;&amp;amp; q == null)return true;">
+  <meta name="description" content="123456789101112public int findLUSlength(String a, String b) &amp;#123;    int la = a.length();    int lb = b.length();    if(la != lb)&amp;#123;        return Math.max(la,lb);    &amp;#125;    if(a.equals(b))&amp;#12">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-100.相同的树">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/23/100-相同的树/index.html">
+<meta property="og:title" content="LeetCode-&quot;521.最长特殊序列Ⅰ&quot;">
+<meta property="og:url" content="http://www.sy0709.com/2018/10/31/521-最长特殊序列Ⅰ/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="12345678910public boolean isSameTree(TreeNode p, TreeNode q) &amp;#123;    return isSame(p,q);&amp;#125;private boolean isSame(TreeNode p, TreeNode q) &amp;#123;    if(p == null &amp;amp;&amp;amp; q == null)return true;">
+<meta property="og:description" content="123456789101112public int findLUSlength(String a, String b) &amp;#123;    int la = a.length();    int lb = b.length();    if(la != lb)&amp;#123;        return Math.max(la,lb);    &amp;#125;    if(a.equals(b))&amp;#12">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-18T13:30:41.319Z">
+<meta property="og:updated_time" content="2018-10-31T12:21:03.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-100.相同的树">
-<meta name="twitter:description" content="12345678910public boolean isSameTree(TreeNode p, TreeNode q) &amp;#123;    return isSame(p,q);&amp;#125;private boolean isSame(TreeNode p, TreeNode q) &amp;#123;    if(p == null &amp;amp;&amp;amp; q == null)return true;">
+<meta name="twitter:title" content="LeetCode-&quot;521.最长特殊序列Ⅰ&quot;">
+<meta name="twitter:description" content="123456789101112public int findLUSlength(String a, String b) &amp;#123;    int la = a.length();    int lb = b.length();    if(la != lb)&amp;#123;        return Math.max(la,lb);    &amp;#125;    if(a.equals(b))&amp;#12">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/23/100-相同的树/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/10/31/521-最长特殊序列Ⅰ/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode-100.相同的树 | xianga</title>
+  <title>LeetCode-"521.最长特殊序列Ⅰ" | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/100-相同的树/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/31/521-最长特殊序列Ⅰ/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode-100.相同的树
+          <h2 class="post-title" itemprop="name headline">LeetCode-"521.最长特殊序列Ⅰ"
               
             
           </h2>
@@ -341,24 +341,12 @@
                 
               
 
-              <time title="创建时间：2018-09-23 15:41:53" itemprop="dateCreated datePublished" datetime="2018-09-23T15:41:53+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-31 20:17:17 / 修改时间：20:21:03" itemprop="dateCreated datePublished" datetime="2018-10-31T20:17:17+08:00">2018-10-31</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-18 21:30:41" itemprop="dateModified" datetime="2018-10-18T21:30:41+08:00">2018-10-18</time>
               
             
           </span>
@@ -393,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">356</span>
+                <span title="本文字数">274</span>
               
 
               
@@ -427,7 +415,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public boolean isSameTree(TreeNode p, TreeNode q) &#123;</span><br><span class="line">    return isSame(p,q);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private boolean isSame(TreeNode p, TreeNode q) &#123;</span><br><span class="line">    if(p == null &amp;&amp; q == null)return true;</span><br><span class="line">    if(p == null || q == null)return false;</span><br><span class="line">    if(p.val != q.val)return false;</span><br><span class="line">    else return isSame(p.left,q.left) &amp;&amp; isSame(p.right,q.right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLUSlength</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> la = a.length();</span><br><span class="line">    <span class="keyword">int</span> lb = b.length();</span><br><span class="line">    <span class="keyword">if</span>(la != lb)&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.max(la,lb);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(a.equals(b))&#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> la;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -460,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/23/107-二叉树的层次遍历II/" rel="next" title="LeetCode-107.二叉树的层次遍历II">
-                <i class="fa fa-chevron-left"></i> LeetCode-107.二叉树的层次遍历II
+              <a href="/2018/10/30/77-组合/" rel="next" title="LeetCode-"77.组合"">
+                <i class="fa fa-chevron-left"></i> LeetCode-"77.组合"
               </a>
             
           </div>
@@ -469,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/23/112-路径总和/" rel="prev" title="LeetCode-112.路径总和">
-                LeetCode-112.路径总和 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

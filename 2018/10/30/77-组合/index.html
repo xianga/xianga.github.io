@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="12345678910public boolean isSameTree(TreeNode p, TreeNode q) &amp;#123;    return isSame(p,q);&amp;#125;private boolean isSame(TreeNode p, TreeNode q) &amp;#123;    if(p == null &amp;amp;&amp;amp; q == null)return true;">
+  <meta name="description" content="12345678910111213141516171819202122private List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; combine(int n, int k) &amp;#123;    for">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-100.相同的树">
-<meta property="og:url" content="http://www.sy0709.com/2018/09/23/100-相同的树/index.html">
+<meta property="og:title" content="LeetCode-&quot;77.组合&quot;">
+<meta property="og:url" content="http://www.sy0709.com/2018/10/30/77-组合/index.html">
 <meta property="og:site_name" content="xianga">
-<meta property="og:description" content="12345678910public boolean isSameTree(TreeNode p, TreeNode q) &amp;#123;    return isSame(p,q);&amp;#125;private boolean isSame(TreeNode p, TreeNode q) &amp;#123;    if(p == null &amp;amp;&amp;amp; q == null)return true;">
+<meta property="og:description" content="12345678910111213141516171819202122private List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; combine(int n, int k) &amp;#123;    for">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-18T13:30:41.319Z">
+<meta property="og:updated_time" content="2018-10-30T12:49:34.423Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-100.相同的树">
-<meta name="twitter:description" content="12345678910public boolean isSameTree(TreeNode p, TreeNode q) &amp;#123;    return isSame(p,q);&amp;#125;private boolean isSame(TreeNode p, TreeNode q) &amp;#123;    if(p == null &amp;amp;&amp;amp; q == null)return true;">
+<meta name="twitter:title" content="LeetCode-&quot;77.组合&quot;">
+<meta name="twitter:description" content="12345678910111213141516171819202122private List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; combine(int n, int k) &amp;#123;    for">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.sy0709.com/2018/09/23/100-相同的树/"/>
+  <link rel="canonical" href="http://www.sy0709.com/2018/10/30/77-组合/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>LeetCode-100.相同的树 | xianga</title>
+  <title>LeetCode-"77.组合" | xianga</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/100-相同的树/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/30/77-组合/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -316,7 +316,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode-100.相同的树
+          <h2 class="post-title" itemprop="name headline">LeetCode-"77.组合"
               
             
           </h2>
@@ -341,24 +341,12 @@
                 
               
 
-              <time title="创建时间：2018-09-23 15:41:53" itemprop="dateCreated datePublished" datetime="2018-09-23T15:41:53+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-30 20:48:28 / 修改时间：20:49:34" itemprop="dateCreated datePublished" datetime="2018-10-30T20:48:28+08:00">2018-10-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-18 21:30:41" itemprop="dateModified" datetime="2018-10-18T21:30:41+08:00">2018-10-18</time>
               
             
           </span>
@@ -393,7 +381,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">356</span>
+                <span title="本文字数">1.3k</span>
               
 
               
@@ -427,7 +415,9 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public boolean isSameTree(TreeNode p, TreeNode q) &#123;</span><br><span class="line">    return isSame(p,q);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private boolean isSame(TreeNode p, TreeNode q) &#123;</span><br><span class="line">    if(p == null &amp;&amp; q == null)return true;</span><br><span class="line">    if(p == null || q == null)return false;</span><br><span class="line">    if(p.val != q.val)return false;</span><br><span class="line">    else return isSame(p.left,q.left) &amp;&amp; isSame(p.right,q.right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> List&lt;List&lt;Integer&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combine(<span class="keyword">int</span> n, <span class="keyword">int</span> k) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        List&lt;Integer&gt; temp = <span class="keyword">new</span> ArrayList&lt;Integer&gt;(k);</span><br><span class="line">        temp.add(i);</span><br><span class="line">        myCombine(temp,n,k,i+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>  list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myCombine</span><span class="params">(List&lt;Integer&gt; temp,<span class="keyword">int</span> n, <span class="keyword">int</span> k,<span class="keyword">int</span> start)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(temp.size() == k)&#123;</span><br><span class="line">        list.add(temp);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= n; i++) &#123;</span><br><span class="line">        List&lt;Integer&gt; sub = <span class="keyword">new</span> ArrayList&lt;Integer&gt;(k);</span><br><span class="line">        sub.addAll(temp);</span><br><span class="line">        sub.add(i);</span><br><span class="line">        myCombine(sub,n,k,i+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>更好地解法:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">   List&lt;List&lt;Integer&gt;&gt; res=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combine(<span class="keyword">int</span> n, <span class="keyword">int</span> k) &#123;</span><br><span class="line">	fun(<span class="number">0</span>,n,k,<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> idx,<span class="keyword">int</span> n,<span class="keyword">int</span> k,List&lt;Integer&gt; list)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(list.size()==k) &#123;</span><br><span class="line">		res.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;(list));</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=idx;i&lt;n-(k-list.size())+<span class="number">1</span>;i++) &#123;</span><br><span class="line">		list.add(i+<span class="number">1</span>);</span><br><span class="line">		fun(i+<span class="number">1</span>,n,k,list);</span><br><span class="line">		list.remove(list.size()-<span class="number">1</span>);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -460,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/23/107-二叉树的层次遍历II/" rel="next" title="LeetCode-107.二叉树的层次遍历II">
-                <i class="fa fa-chevron-left"></i> LeetCode-107.二叉树的层次遍历II
+              <a href="/2018/10/29/459-重复的子字符串/" rel="next" title="LeetCode-"459.重复的子字符串"">
+                <i class="fa fa-chevron-left"></i> LeetCode-"459.重复的子字符串"
               </a>
             
           </div>
@@ -470,8 +460,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/23/112-路径总和/" rel="prev" title="LeetCode-112.路径总和">
-                LeetCode-112.路径总和 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/31/521-最长特殊序列Ⅰ/" rel="prev" title="LeetCode-"521.最长特殊序列Ⅰ"">
+                LeetCode-"521.最长特殊序列Ⅰ" <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
