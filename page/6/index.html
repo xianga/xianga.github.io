@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/109-有序链表转换二叉树搜索树/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/10/17-电话号码的字母组合/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -314,8 +314,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/109-有序链表转换二叉树搜索树/" itemprop="url">
-                  LeetCode-109.有序链表转换二叉树搜索树
+                <a class="post-title-link" href="/2018/10/10/17-电话号码的字母组合/" itemprop="url">
+                  LeetCode-17.电话号码的字母组合
                 </a>
               
             
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:34:35" itemprop="dateCreated datePublished" datetime="2018-09-23T16:34:35+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-10 20:18:19" itemprop="dateCreated datePublished" datetime="2018-10-10T20:18:19+08:00">2018-10-10</time>
             
 
             
@@ -385,7 +385,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">647</span>
+                <span title="本文字数">1.2k</span>
               
 
               
@@ -421,7 +421,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> TreeNode <span class="title">sortedListToBST</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">while</span>(head != <span class="keyword">null</span>)&#123;</span><br><span class="line">        list.add(head.val);</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    list.add(<span class="number">0</span>);</span><br><span class="line">    list.add(<span class="number">1</span>);</span><br><span class="line">    list.add(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> length = list.size();</span><br><span class="line">    <span class="keyword">return</span> BuildTree(list,<span class="number">0</span>,length-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> TreeNode <span class="title">BuildTree</span><span class="params">(List&lt;Integer&gt; list, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;r)<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">int</span> mid = (r+l) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    TreeNode root = <span class="keyword">new</span> TreeNode(list.get(mid));</span><br><span class="line"></span><br><span class="line">    root.left = BuildTree(list,l,mid-<span class="number">1</span>);</span><br><span class="line">    root.right = BuildTree(list,mid+<span class="number">1</span>,r);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">char</span> [][] chars = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">8</span>][];</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">letterCombinations</span><span class="params">(String digits)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(digits == <span class="keyword">null</span> || digits.length() == <span class="number">0</span>)<span class="keyword">return</span> list;</span><br><span class="line">        chars[<span class="number">0</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>&#125;;</span><br><span class="line">        chars[<span class="number">1</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>&#125;;</span><br><span class="line">        chars[<span class="number">2</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'g'</span>,<span class="string">'h'</span>,<span class="string">'i'</span>&#125;;</span><br><span class="line">        chars[<span class="number">3</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'j'</span>,<span class="string">'k'</span>,<span class="string">'l'</span>&#125;;</span><br><span class="line">        chars[<span class="number">4</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'m'</span>,<span class="string">'n'</span>,<span class="string">'o'</span>&#125;;</span><br><span class="line">        chars[<span class="number">5</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'p'</span>,<span class="string">'q'</span>,<span class="string">'r'</span>,<span class="string">'s'</span>&#125;;</span><br><span class="line">        chars[<span class="number">6</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'t'</span>,<span class="string">'u'</span>,<span class="string">'v'</span>&#125;;</span><br><span class="line">        chars[<span class="number">7</span>] = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'w'</span>,<span class="string">'x'</span>,<span class="string">'y'</span>,<span class="string">'z'</span>&#125;;</span><br><span class="line"></span><br><span class="line">        compl(<span class="number">0</span>,digits,<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">compl</span><span class="params">(<span class="keyword">int</span> dep,String str,String tar)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(dep &lt; str.length())&#123;</span><br><span class="line">            <span class="keyword">int</span> index = str.charAt(dep) - <span class="string">'2'</span>;</span><br><span class="line">            String temp = tar;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; chars[index].length; i++) &#123;</span><br><span class="line">                temp = tar + chars[index][i];</span><br><span class="line">                compl(dep+<span class="number">1</span>,str,temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            list.add(tar);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -474,7 +474,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/64-最小路径和/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/09/372-超级次方/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -493,8 +493,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/64-最小路径和/" itemprop="url">
-                  LeetCode-64.最小路径和
+                <a class="post-title-link" href="/2018/10/09/372-超级次方/" itemprop="url">
+                  LeetCode-372.超级次方
                 </a>
               
             
@@ -520,7 +520,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:34:14" itemprop="dateCreated datePublished" datetime="2018-09-23T16:34:14+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-09 22:51:35" itemprop="dateCreated datePublished" datetime="2018-10-09T22:51:35+08:00">2018-10-09</time>
             
 
             
@@ -564,7 +564,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">604</span>
+                <span title="本文字数">514</span>
               
 
               
@@ -600,7 +600,8 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> row = grid.length;</span><br><span class="line">    <span class="keyword">int</span> col = grid[<span class="number">0</span>].length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> [][] res = <span class="keyword">new</span> <span class="keyword">int</span>[row][col];</span><br><span class="line">    res[<span class="number">0</span>][<span class="number">0</span>] = grid[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; col; i++) &#123;</span><br><span class="line">        res[<span class="number">0</span>][i] = res[<span class="number">0</span>][i-<span class="number">1</span>] + grid[<span class="number">0</span>][i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        res[i][<span class="number">0</span>] = res[i-<span class="number">1</span>][<span class="number">0</span>] + grid[i][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; col; j++) &#123;</span><br><span class="line">            res[i][j] = Math.min(res[i-<span class="number">1</span>][j],res[i][j-<span class="number">1</span>])+grid[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res[row-<span class="number">1</span>][col-<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>思路：因为积的余数=余数的积，可以得出2<sup>123</sup>=((2<sup>1</sup>)<sup>10</sup><em>2<sup>2</sup>)<sup>10</sup></em>2<sup>3</sup><br>，所以可以写出以下代码；一开始使用Math.pow函数，没有考虑到当b[i]=1且a&gt;1337的情况；<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">superPow</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span>[] b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length; i++) &#123;</span><br><span class="line">        res = pow(res,<span class="number">10</span>) * pow(a,b[i]) % <span class="number">1337</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pow</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> x % <span class="number">1337</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pow(x % <span class="number">1337</span>, n / <span class="number">2</span>) * pow(x % <span class="number">1337</span>, n - n / <span class="number">2</span>) % <span class="number">1337</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -653,7 +654,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/874-模拟行走机器人/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/09/553-最优除法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -672,8 +673,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/874-模拟行走机器人/" itemprop="url">
-                  LeetCode-874.模拟行走机器人
+                <a class="post-title-link" href="/2018/10/09/553-最优除法/" itemprop="url">
+                  LeetCode-553.最优除法
                 </a>
               
             
@@ -699,7 +700,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:21:47" itemprop="dateCreated datePublished" datetime="2018-09-23T16:21:47+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-09 22:50:25" itemprop="dateCreated datePublished" datetime="2018-10-09T22:50:25+08:00">2018-10-09</time>
             
 
             
@@ -743,7 +744,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">429</span>
               
 
               
@@ -779,7 +780,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">robotSim</span><span class="params">(<span class="keyword">int</span>[] commands, <span class="keyword">int</span>[][] obstacles)</span> </span>&#123;</span><br><span class="line">    HashMap&lt;String,Boolean&gt; map = <span class="keyword">new</span> HashMap&lt;String,Boolean&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; obstacles.length; i++) &#123;</span><br><span class="line">        map.put(obstacles[i][<span class="number">0</span>]+<span class="string">","</span>+obstacles[i][<span class="number">1</span>],<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 描述方向 上 右 下 左</span></span><br><span class="line">    <span class="keyword">int</span> [][] f = <span class="keyword">new</span> <span class="keyword">int</span>[][]&#123;&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,-<span class="number">1</span>&#125;,&#123;-<span class="number">1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="comment">// 当前向上</span></span><br><span class="line">    <span class="keyword">int</span> k =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> x =<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> res =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; commands.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(commands[i] == -<span class="number">1</span>)&#123;</span><br><span class="line">            k = (k+<span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (commands[i] == -<span class="number">2</span>)&#123;</span><br><span class="line">            k = (k +<span class="number">4</span>-<span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> cur[] = f[k];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; commands[i]; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(map.containsKey((x + cur[<span class="number">0</span>])+<span class="string">","</span>+(y+cur[<span class="number">1</span>])))&#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                x += cur[<span class="number">0</span>];</span><br><span class="line">                y += cur[<span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            res = Math.max(res,x * x+y*y);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">optimalDivision</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nums.length == <span class="number">1</span>)<span class="keyword">return</span> String.valueOf(nums[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">if</span>(nums.length == <span class="number">2</span>)<span class="keyword">return</span> nums[<span class="number">0</span>] + <span class="string">"/"</span> + nums[<span class="number">1</span>];</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    sb.append(nums[<span class="number">0</span>]+<span class="string">"/"</span>);</span><br><span class="line">    sb.append(<span class="string">"("</span>);</span><br><span class="line">    sb.append(nums[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        sb.append(<span class="string">"/"</span>+nums[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    sb.append(<span class="string">")"</span>);</span><br><span class="line">    <span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -832,7 +833,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/872-叶子相似的数/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/10/07/917-仅仅反转字母/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -851,8 +852,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/872-叶子相似的数/" itemprop="url">
-                  LeetCode-872.叶子相似的数
+                <a class="post-title-link" href="/2018/10/07/917-仅仅反转字母/" itemprop="url">
+                  LeetCode-917.仅仅反转字母
                 </a>
               
             
@@ -878,7 +879,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:21:08" itemprop="dateCreated datePublished" datetime="2018-09-23T16:21:08+08:00">2018-09-23</time>
+              <time title="创建时间：2018-10-07 09:46:03" itemprop="dateCreated datePublished" datetime="2018-10-07T09:46:03+08:00">2018-10-07</time>
             
 
             
@@ -922,7 +923,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">906</span>
+                <span title="本文字数">740</span>
               
 
               
@@ -958,7 +959,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">List&lt;Integer&gt; list2 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">leafSimilar</span><span class="params">(TreeNode root1, TreeNode root2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root1 == <span class="keyword">null</span> || root2 == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    search(root1,list1);</span><br><span class="line">    search(root2,list2);</span><br><span class="line">    <span class="keyword">if</span>(list1.size() != list2.size())&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list1.size(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(list1.get(i).intValue() != list2.get(i).intValue())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">search</span><span class="params">(TreeNode root,List&lt;Integer&gt; list)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>)&#123;</span><br><span class="line">        list.add(root.val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.left != <span class="keyword">null</span>)&#123;</span><br><span class="line">        search(root.left,list);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(root.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">        search(root.right,list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">reverseOnlyLetters</span><span class="params">(String S)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.length() &lt;= <span class="number">1</span>) <span class="keyword">return</span> S;</span><br><span class="line">    <span class="keyword">char</span>[] chars = S.toCharArray();</span><br><span class="line">    <span class="keyword">char</span>[] res = <span class="keyword">new</span> <span class="keyword">char</span>[chars.length];</span><br><span class="line">    ArrayDeque&lt;Character&gt; stack = <span class="keyword">new</span> ArrayDeque&lt;Character&gt;(chars.length);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; chars.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>((chars[i] &gt;= <span class="string">'A'</span> &amp;&amp; chars[i] &lt;= <span class="string">'Z'</span>) || (chars[i] &gt;= <span class="string">'a'</span> &amp;&amp; chars[i]&lt;=<span class="string">'z'</span>))&#123;</span><br><span class="line">            stack.push(chars[i]);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            res[i] = chars[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; chars.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(res[i] == <span class="string">'\u0000'</span>)&#123;</span><br><span class="line">            res[i] = stack.pop();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> String(res);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1011,7 +1012,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/867-转置矩阵/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/30/454-四数相加II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1030,8 +1031,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/867-转置矩阵/" itemprop="url">
-                  LeetCode-867.转置矩阵
+                <a class="post-title-link" href="/2018/09/30/454-四数相加II/" itemprop="url">
+                  LeetCode-454.四数相加II
                 </a>
               
             
@@ -1057,7 +1058,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:19:54" itemprop="dateCreated datePublished" datetime="2018-09-23T16:19:54+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-30 19:23:59" itemprop="dateCreated datePublished" datetime="2018-09-30T19:23:59+08:00">2018-09-30</time>
             
 
             
@@ -1101,7 +1102,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">347</span>
+                <span title="本文字数">799</span>
               
 
               
@@ -1137,7 +1138,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[][] transpose(<span class="keyword">int</span>[][] A) &#123;</span><br><span class="line">    <span class="keyword">if</span>(A == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">    <span class="keyword">int</span> [][] res = <span class="keyword">new</span> <span class="keyword">int</span>[A[<span class="number">0</span>].length][A.length];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; A[i].length; j++) &#123;</span><br><span class="line">            res[j][i] = A[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">fourSumCount</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B, <span class="keyword">int</span>[] C, <span class="keyword">int</span>[] D)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(A[i] + B[j]))&#123;</span><br><span class="line">                map.put(A[i] +B[j],map.get(A[i] +B[j])+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(A[i]+B[j],<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> t = C[i] + D[j];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(-t))&#123;</span><br><span class="line">                count = count + map.get(-t);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1190,7 +1191,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/860-柠檬水找零/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/30/914-卡片分组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1209,8 +1210,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/860-柠檬水找零/" itemprop="url">
-                  LeetCode-860.柠檬水找零
+                <a class="post-title-link" href="/2018/09/30/914-卡片分组/" itemprop="url">
+                  LeetCode-914.卡片分组
                 </a>
               
             
@@ -1236,7 +1237,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:19:31" itemprop="dateCreated datePublished" datetime="2018-09-23T16:19:31+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-30 19:22:05" itemprop="dateCreated datePublished" datetime="2018-09-30T19:22:05+08:00">2018-09-30</time>
             
 
             
@@ -1280,7 +1281,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">806</span>
+                <span title="本文字数">939</span>
               
 
               
@@ -1316,7 +1317,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">lemonadeChange</span><span class="params">(<span class="keyword">int</span>[] bills)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> count10=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; bills.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(bills[i] == <span class="number">5</span>)&#123;</span><br><span class="line">            count ++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(bills[i] == <span class="number">10</span>)&#123;</span><br><span class="line">            count--;</span><br><span class="line">            <span class="keyword">if</span>(count &lt; <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            count10++;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(bills[i] == <span class="number">20</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count == <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(count10 &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                count10 --;</span><br><span class="line">                count --;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(count &gt;= <span class="number">3</span>)&#123;</span><br><span class="line">                count -= <span class="number">3</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasGroupsSizeX</span><span class="params">(<span class="keyword">int</span>[] deck)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (deck.length == <span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; deck.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(deck[i]))&#123;</span><br><span class="line">            map.put(deck[i],map.get(deck[i])+<span class="number">1</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            map.put(deck[i],<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(map.size() == <span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    Set&lt;Map.Entry&lt;Integer, Integer&gt;&gt; entries = map.entrySet();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= deck.length / <span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;Integer, Integer&gt; entry : entries)&#123;</span><br><span class="line">            <span class="keyword">int</span> t = entry.getValue();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(t % i != <span class="number">0</span>)&#123;</span><br><span class="line">                flag = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1369,7 +1370,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/766-托普利茨矩阵/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/29/789-逃脱阻碍者/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1388,8 +1389,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/766-托普利茨矩阵/" itemprop="url">
-                  LeetCode-766.托普利茨矩阵
+                <a class="post-title-link" href="/2018/09/29/789-逃脱阻碍者/" itemprop="url">
+                  LeetCode-789.逃脱阻碍者
                 </a>
               
             
@@ -1415,7 +1416,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:19:16" itemprop="dateCreated datePublished" datetime="2018-09-23T16:19:16+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-29 22:32:27" itemprop="dateCreated datePublished" datetime="2018-09-29T22:32:27+08:00">2018-09-29</time>
             
 
             
@@ -1459,7 +1460,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">836</span>
+                <span title="本文字数">340</span>
               
 
               
@@ -1495,7 +1496,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isToeplitzMatrix</span><span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(matrix == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">    <span class="keyword">int</span> row = matrix.length;</span><br><span class="line">    <span class="keyword">int</span> col = matrix[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span> x ,y;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; col; i++) &#123;</span><br><span class="line">        x = <span class="number">0</span>;</span><br><span class="line">        y = i;</span><br><span class="line">        <span class="keyword">while</span>(x &lt; row-<span class="number">1</span> &amp;&amp; y &lt; col-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(matrix[x][y] != matrix[x+<span class="number">1</span>][y+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            x++;</span><br><span class="line">            y++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</span><br><span class="line">        x = i;</span><br><span class="line">        y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x &lt; row-<span class="number">1</span> &amp;&amp; y &lt; col-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(matrix[x][y] != matrix[x+<span class="number">1</span>][y+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            x++;</span><br><span class="line">            y++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">escapeGhosts</span><span class="params">(<span class="keyword">int</span>[][] ghosts, <span class="keyword">int</span>[] target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> step = Math.abs(target[<span class="number">0</span>]) + Math.abs(target[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ghosts.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> s = Math.abs(ghosts[i][<span class="number">0</span>] - target[<span class="number">0</span>]) + Math.abs(ghosts[i][<span class="number">1</span>] - target[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(s &lt; step) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1548,7 +1549,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/746-使用最小花费爬楼梯/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/29/532-数组中的K-diff数对/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1567,8 +1568,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/746-使用最小花费爬楼梯/" itemprop="url">
-                  LeetCode-746.使用最小花费爬楼梯
+                <a class="post-title-link" href="/2018/09/29/532-数组中的K-diff数对/" itemprop="url">
+                  LeetCode-532.数组中的K-diff数对
                 </a>
               
             
@@ -1594,7 +1595,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:18:38" itemprop="dateCreated datePublished" datetime="2018-09-23T16:18:38+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-29 22:30:25" itemprop="dateCreated datePublished" datetime="2018-09-29T22:30:25+08:00">2018-09-29</time>
             
 
             
@@ -1638,7 +1639,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">415</span>
+                <span title="本文字数">677</span>
               
 
               
@@ -1674,7 +1675,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCostClimbingStairs</span><span class="params">(<span class="keyword">int</span>[] cost)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(cost.length == <span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.min(cost[<span class="number">0</span>],cost[<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> num[] = <span class="keyword">new</span> <span class="keyword">int</span>[cost.length];</span><br><span class="line">    num[<span class="number">0</span>] = cost[<span class="number">0</span>];</span><br><span class="line">    num[<span class="number">1</span>] = cost[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; cost.length; i++) &#123;</span><br><span class="line">        num[i] = Math.min(num[i-<span class="number">1</span>],num[i-<span class="number">2</span>]) + cost[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Math.min(num[cost.length - <span class="number">1</span>],num[cost.length - <span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findPairs</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nums.length &lt; <span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    <span class="keyword">int</span> l=<span class="number">0</span>,r = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(r &lt; nums.length &amp;&amp; l &lt; nums.length) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[r] - nums[l] == k) &#123;</span><br><span class="line">            count++;</span><br><span class="line">            l++;</span><br><span class="line">            <span class="keyword">while</span>(l&lt;nums.length &amp;&amp; nums[l] == nums[l-<span class="number">1</span>])</span><br><span class="line">                l++;</span><br><span class="line">            <span class="keyword">while</span>(r&lt;nums.length &amp;&amp; nums[r] == nums[r-<span class="number">1</span>])</span><br><span class="line">                r++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[r] - nums[l] &gt; k) &#123;</span><br><span class="line">            l++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            r++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(l == r) r++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1727,7 +1728,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/700-二叉搜索树中的搜索/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/28/724-寻找数组的中心索引/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1746,8 +1747,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/700-二叉搜索树中的搜索/" itemprop="url">
-                  LeetCode-700.二叉搜索树中的搜索
+                <a class="post-title-link" href="/2018/09/28/724-寻找数组的中心索引/" itemprop="url">
+                  LeetCode-724.寻找数组的中心索引
                 </a>
               
             
@@ -1773,7 +1774,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:18:18" itemprop="dateCreated datePublished" datetime="2018-09-23T16:18:18+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-28 22:05:07" itemprop="dateCreated datePublished" datetime="2018-09-28T22:05:07+08:00">2018-09-28</time>
             
 
             
@@ -1817,7 +1818,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">310</span>
+                <span title="本文字数">361</span>
               
 
               
@@ -1853,7 +1854,8 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> TreeNode <span class="title">searchBST</span><span class="params">(TreeNode root, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">if</span>(root.val &gt; val)&#123;</span><br><span class="line">        <span class="keyword">return</span> searchBST(root.left,val);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(root.val &lt; val)&#123;</span><br><span class="line">        <span class="keyword">return</span> searchBST(root.right,val);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>思路：因为索引左右两边相等，即总和=左边*2+索引本身的值<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pivotIndex</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(t * <span class="number">2</span> + nums[i] == sum)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        t = t + nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -1906,7 +1908,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/23/690-员工的重要性/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/09/27/374-猜数字大小/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1925,8 +1927,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/23/690-员工的重要性/" itemprop="url">
-                  LeetCode-690.员工的重要性
+                <a class="post-title-link" href="/2018/09/27/374-猜数字大小/" itemprop="url">
+                  LeetCode-374.猜数字大小
                 </a>
               
             
@@ -1952,7 +1954,7 @@
                 
               
 
-              <time title="创建时间：2018-09-23 16:18:03" itemprop="dateCreated datePublished" datetime="2018-09-23T16:18:03+08:00">2018-09-23</time>
+              <time title="创建时间：2018-09-27 22:30:21" itemprop="dateCreated datePublished" datetime="2018-09-27T22:30:21+08:00">2018-09-27</time>
             
 
             
@@ -1996,7 +1998,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">435</span>
               
 
               
@@ -2032,7 +2034,8 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">        <span class="comment">// It's the unique id of each node;</span></span><br><span class="line">        <span class="comment">// unique id of this employee</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> id;</span><br><span class="line">        <span class="comment">// the importance value of this employee</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> importance;</span><br><span class="line">        <span class="comment">// the id of direct subordinates</span></span><br><span class="line">        <span class="keyword">public</span> List&lt;Integer&gt; subordinates;</span><br><span class="line">    &#125;</span><br><span class="line">    Map&lt;Integer,Employee&gt; map = <span class="keyword">new</span> HashMap&lt;Integer,Employee&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getImportance</span><span class="params">(List&lt;Employee&gt; employees, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; employees.size(); i++) &#123;</span><br><span class="line">            Employee employee = employees.get(i);</span><br><span class="line">            map.put(employee.id,employee);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> get(map.get(id));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">(Employee employee)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(employee == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = employee.importance;</span><br><span class="line">        <span class="keyword">if</span>(employee.subordinates !=<span class="keyword">null</span> &amp;&amp; employee.subordinates.size() &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; employee.subordinates.size(); i++) &#123;</span><br><span class="line">                sum = sum + get(map.get(employee.subordinates.get(i)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+            <p>  一开始使用了递归，超出时间限制；而且没有考虑到int溢出的情况；最后AC的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">guessNumber</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">1</span>,r = n;</span><br><span class="line">    <span class="keyword">int</span> mid = n &gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> res = guess(mid);</span><br><span class="line">    <span class="keyword">while</span>(res != <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(res &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            l = mid +<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(res &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            r = mid -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        mid =l+(r-l&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        res = guess(mid);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> mid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -2074,7 +2077,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2117,7 +2120,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2191,7 +2194,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2203,7 +2206,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">58k</span>
+    <span title="站点总字数">65k</span>
   
 
   
@@ -2212,7 +2215,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">53 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
   
 </div>
 

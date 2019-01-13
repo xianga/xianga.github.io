@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/26/888-公平的糖果交换/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/13/974-和可被K整除的子数组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -314,8 +314,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/26/888-公平的糖果交换/" itemprop="url">
-                  LeetCode-"888.公平的糖果交换"
+                <a class="post-title-link" href="/2019/01/13/974-和可被K整除的子数组/" itemprop="url">
+                  LeetCode-"974.和可被K整除的子数组"
                 </a>
               
             
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="创建时间：2018-12-26 20:25:46 / 修改时间：20:26:39" itemprop="dateCreated datePublished" datetime="2018-12-26T20:25:46+08:00">2018-12-26</time>
+              <time title="创建时间：2019-01-13 11:48:41 / 修改时间：11:48:59" itemprop="dateCreated datePublished" datetime="2019-01-13T11:48:41+08:00">2019-01-13</time>
             
 
             
@@ -373,7 +373,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">622</span>
+                <span title="本文字数">494</span>
               
 
               
@@ -409,7 +409,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] fairCandySwap(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B) &#123;</span><br><span class="line">       <span class="keyword">int</span> suma = <span class="number">0</span>, sumb = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">           suma += A[i];</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; B.length; i++) &#123;</span><br><span class="line">           sumb += B[i];</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="keyword">int</span> t = (sumb - suma) / <span class="number">2</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.length; j++) &#123;</span><br><span class="line">               <span class="keyword">if</span>(B[j] - A[i] ==  t)&#123;</span><br><span class="line">                   <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;A[i],B[j]&#125;;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subarraysDivByK</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> []res = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">        <span class="keyword">while</span>(size &lt; A.length) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length &amp;&amp; i + size &lt; A.length; i++) &#123;</span><br><span class="line">                res[i] += A[i + size];</span><br><span class="line">                <span class="keyword">if</span> (res[i] % K == <span class="number">0</span>) &#123;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            size++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -462,7 +462,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/26/697-数组的度/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/13/976-三角形的最大周长/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -481,8 +481,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/26/697-数组的度/" itemprop="url">
-                  LeetCode-"697.数组的度"
+                <a class="post-title-link" href="/2019/01/13/976-三角形的最大周长/" itemprop="url">
+                  LeetCode-"976.三角形的最大周长"
                 </a>
               
             
@@ -508,7 +508,7 @@
                 
               
 
-              <time title="创建时间：2018-12-26 20:17:09 / 修改时间：20:17:21" itemprop="dateCreated datePublished" datetime="2018-12-26T20:17:09+08:00">2018-12-26</time>
+              <time title="创建时间：2019-01-13 11:39:16 / 修改时间：11:39:32" itemprop="dateCreated datePublished" datetime="2019-01-13T11:39:16+08:00">2019-01-13</time>
             
 
             
@@ -540,7 +540,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.3k</span>
+                <span title="本文字数">298</span>
               
 
               
@@ -576,7 +576,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findShortestSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    Map&lt;Integer,Integer&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        Integer integer = hashMap.get(nums[i]);</span><br><span class="line">        <span class="keyword">if</span>(integer == <span class="keyword">null</span>)&#123;</span><br><span class="line">            hashMap.put(nums[i],<span class="number">1</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(integer+ <span class="number">1</span>&gt; max)&#123;</span><br><span class="line">                max = integer+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            hashMap.put(nums[i],integer+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> length = nums.length;</span><br><span class="line">    Set&lt;Map.Entry&lt;Integer, Integer&gt;&gt; entries = hashMap.entrySet();</span><br><span class="line">    Iterator&lt;Map.Entry&lt;Integer, Integer&gt;&gt; iterator = entries.iterator();</span><br><span class="line">    <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">        Map.Entry&lt;Integer, Integer&gt; next = iterator.next();</span><br><span class="line">        <span class="keyword">if</span>(next.getValue() == max)&#123;</span><br><span class="line">            <span class="keyword">int</span> i =<span class="number">0</span>,j = nums.length -<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(i&lt; nums.length -<span class="number">1</span> &amp;&amp; nums[i] != next.getKey())&#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; nums[j] != next.getKey())&#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(j - i +<span class="number">1</span> &lt; length)&#123;</span><br><span class="line">                length = j - i + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">largestPerimeter</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(A);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = A.length -<span class="number">1</span>; i &gt;= <span class="number">2</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = A[i-<span class="number">1</span>]+ A[i-<span class="number">2</span>];</span><br><span class="line">            <span class="keyword">if</span>(sum &gt; A[i])&#123;</span><br><span class="line">                <span class="keyword">return</span> sum + A[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -629,7 +629,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/21/448-找到所有数组中消失的数字/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/13/973-最接近原点的K个点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -648,8 +648,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/21/448-找到所有数组中消失的数字/" itemprop="url">
-                  LeetCode-"448.找到所有数组中消失的数字"
+                <a class="post-title-link" href="/2019/01/13/973-最接近原点的K个点/" itemprop="url">
+                  LeetCode-"973.最接近原点的K个点"
                 </a>
               
             
@@ -675,7 +675,7 @@
                 
               
 
-              <time title="创建时间：2018-12-21 19:45:34 / 修改时间：19:49:00" itemprop="dateCreated datePublished" datetime="2018-12-21T19:45:34+08:00">2018-12-21</time>
+              <time title="创建时间：2019-01-13 11:31:23 / 修改时间：11:38:55" itemprop="dateCreated datePublished" datetime="2019-01-13T11:31:23+08:00">2019-01-13</time>
             
 
             
@@ -707,7 +707,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">921</span>
+                <span title="本文字数">592</span>
               
 
               
@@ -743,7 +743,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> t = nums[i];</span><br><span class="line">            <span class="keyword">while</span>(t != <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">int</span> j = nums[t - <span class="number">1</span>];</span><br><span class="line">                nums[t - <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">                t = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] != <span class="number">0</span>)&#123;</span><br><span class="line">                list.add(i + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> n = nums.length;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) nums[(nums[i] - <span class="number">1</span>) % n] += n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) <span class="keyword">if</span> (nums[i] &lt;= n) res.add(i + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[][] kClosest(<span class="keyword">int</span>[][] points, <span class="keyword">int</span> K) &#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> []sums  = <span class="keyword">new</span> <span class="keyword">int</span>[points.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; points.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = points[i][<span class="number">0</span>] * points[i][<span class="number">0</span>] + points[i][<span class="number">1</span>] * points[i][<span class="number">1</span>];</span><br><span class="line">            sums[i] = sum;</span><br><span class="line">            map.put(sum,i);</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(sums);</span><br><span class="line">        <span class="keyword">int</span> [][] res = <span class="keyword">new</span> <span class="keyword">int</span>[K][<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; res.length; i++) &#123;</span><br><span class="line">            res[i] = points[map.get(sums[i])];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -796,7 +796,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/21/167-两数之和II-输入有序数组/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/13/leetcode-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -815,8 +815,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/21/167-两数之和II-输入有序数组/" itemprop="url">
-                  LeetCode-"167.两数之和II-输入有序数组"
+                <a class="post-title-link" href="/2019/01/13/leetcode-1/" itemprop="url">
+                  leetcode
                 </a>
               
             
@@ -842,13 +842,9 @@
                 
               
 
-              <time title="创建时间：2018-12-21 19:33:25 / 修改时间：19:34:25" itemprop="dateCreated datePublished" datetime="2018-12-21T19:33:25+08:00">2018-12-21</time>
+              <time title="创建时间：2019-01-13 11:30:42" itemprop="dateCreated datePublished" datetime="2019-01-13T11:30:42+08:00">2019-01-13</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -874,7 +870,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">464</span>
+                <span title="本文字数">0</span>
               
 
               
@@ -910,7 +906,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>,j= numbers.length -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j)&#123;</span><br><span class="line">            <span class="keyword">int</span> t = numbers[i] + numbers[j];</span><br><span class="line">            <span class="keyword">if</span>(t == target)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i+<span class="number">1</span>,j+<span class="number">1</span>&#125;;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(t &lt; target)&#123;</span><br><span class="line">                i ++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                j --;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+            
           
         
       
@@ -963,7 +959,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/20/661-图片平滑器/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/12/120-三角形最小路径和/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -982,8 +978,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/20/661-图片平滑器/" itemprop="url">
-                  LeetCode-"661.图片平滑器"
+                <a class="post-title-link" href="/2019/01/12/120-三角形最小路径和/" itemprop="url">
+                  LeetCode-"120.三角形最小路径和"
                 </a>
               
             
@@ -1009,7 +1005,7 @@
                 
               
 
-              <time title="创建时间：2018-12-20 22:28:32 / 修改时间：22:29:56" itemprop="dateCreated datePublished" datetime="2018-12-20T22:28:32+08:00">2018-12-20</time>
+              <time title="创建时间：2019-01-12 22:59:41 / 修改时间：23:36:59" itemprop="dateCreated datePublished" datetime="2019-01-12T22:59:41+08:00">2019-01-12</time>
             
 
             
@@ -1041,7 +1037,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">470</span>
               
 
               
@@ -1077,7 +1073,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[][] imageSmoother(<span class="keyword">int</span>[][] M) &#123;</span><br><span class="line">        <span class="keyword">int</span> [][] res = <span class="keyword">new</span> <span class="keyword">int</span>[M.length][M[<span class="number">0</span>].length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M[i].length; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> count = <span class="number">1</span>,sum = M[i][j];</span><br><span class="line">                <span class="keyword">if</span>(i - <span class="number">1</span> &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                    sum += M[i-<span class="number">1</span>][j];</span><br><span class="line">                    count++;</span><br><span class="line">                    <span class="keyword">if</span>(j - <span class="number">1</span>&gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                        sum += M[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">                        count++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(j + <span class="number">1</span> &lt; M[i].length)&#123;</span><br><span class="line">                        sum += M[i - <span class="number">1</span>][j + <span class="number">1</span>];</span><br><span class="line">                        count++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(i + <span class="number">1</span> &lt; M.length)&#123;</span><br><span class="line">                    sum += M[i+<span class="number">1</span>][j];</span><br><span class="line">                    count++;</span><br><span class="line">                    <span class="keyword">if</span>(j - <span class="number">1</span>&gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                        sum += M[i + <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">                        count++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(j + <span class="number">1</span> &lt; M[i].length)&#123;</span><br><span class="line">                        sum += M[i + <span class="number">1</span>][j + <span class="number">1</span>];</span><br><span class="line">                        count++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(j - <span class="number">1</span>&gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                    sum += M[i][j - <span class="number">1</span>];</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(j + <span class="number">1</span> &lt; M[i].length)&#123;</span><br><span class="line">                    sum += M[i][j + <span class="number">1</span>];</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                res[i][j] = sum / count;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumTotal</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; triangle)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(triangle.size() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> res[] = <span class="keyword">new</span> <span class="keyword">int</span>[triangle.size()+<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = triangle.size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        List&lt;Integer&gt; list = triangle.get(i);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; list.size(); j++) &#123;</span><br><span class="line">            res[j] = Math.min(res[j],res[j+<span class="number">1</span>]) + list.get(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1130,7 +1126,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/19/896-单调数列/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/10/219-存在重复元素II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1149,8 +1145,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/896-单调数列/" itemprop="url">
-                  LeetCode-"896.单调数列"
+                <a class="post-title-link" href="/2019/01/10/219-存在重复元素II/" itemprop="url">
+                  LeetCode-"219.存在重复元素II"
                 </a>
               
             
@@ -1176,7 +1172,7 @@
                 
               
 
-              <time title="创建时间：2018-12-19 19:40:53 / 修改时间：19:41:00" itemprop="dateCreated datePublished" datetime="2018-12-19T19:40:53+08:00">2018-12-19</time>
+              <time title="创建时间：2019-01-10 21:37:26 / 修改时间：21:38:09" itemprop="dateCreated datePublished" datetime="2019-01-10T21:37:26+08:00">2019-01-10</time>
             
 
             
@@ -1208,7 +1204,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">570</span>
+                <span title="本文字数">504</span>
               
 
               
@@ -1244,7 +1240,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isMonotonic</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(A.length &lt;= <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (; i &lt; A.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(A[i] != A[i-<span class="number">1</span>])&#123;</span><br><span class="line">                flag = A[i] &gt; A[i-<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (;  i&lt; A.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(A[i] != A[i-<span class="number">1</span>] &amp;&amp; (A[i] &gt; A[i-<span class="number">1</span>] ^ flag))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] &gt; nums[j])</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] == nums[j] &amp;&amp; (i - j) &lt;= k)</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1297,7 +1293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/18/485-最大连续1的个数/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/10/643-子数组最大平均数I/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1316,8 +1312,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/18/485-最大连续1的个数/" itemprop="url">
-                  LeetCode-"485.最大连续1的个数"
+                <a class="post-title-link" href="/2019/01/10/643-子数组最大平均数I/" itemprop="url">
+                  LeetCode-"643.子数组最大平均数I"
                 </a>
               
             
@@ -1343,7 +1339,7 @@
                 
               
 
-              <time title="创建时间：2018-12-18 17:52:35 / 修改时间：17:53:17" itemprop="dateCreated datePublished" datetime="2018-12-18T17:52:35+08:00">2018-12-18</time>
+              <time title="创建时间：2019-01-10 21:28:25 / 修改时间：21:28:39" itemprop="dateCreated datePublished" datetime="2019-01-10T21:28:25+08:00">2019-01-10</time>
             
 
             
@@ -1375,7 +1371,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">356</span>
+                <span title="本文字数">330</span>
               
 
               
@@ -1411,7 +1407,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;nums.length &amp;&amp; nums[i] == <span class="number">1</span>)&#123;</span><br><span class="line">            c++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(c &gt; max)&#123;</span><br><span class="line">            max = c;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findMaxAverage</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)&#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">long</span> max = sum;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = k; i &lt; nums.length; i++)&#123;</span><br><span class="line">        sum += nums[i] - nums[i-k];</span><br><span class="line">        max = Math.max(max,sum);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max/<span class="number">1.0</span>/k;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1464,7 +1460,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/18/27-移除元素/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/10/941-有效的山脉数组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1483,8 +1479,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/18/27-移除元素/" itemprop="url">
-                  LeetCode-"27.移除元素"
+                <a class="post-title-link" href="/2019/01/10/941-有效的山脉数组/" itemprop="url">
+                  LeetCode-"941.有效的山脉数组"
                 </a>
               
             
@@ -1510,7 +1506,7 @@
                 
               
 
-              <time title="创建时间：2018-12-18 17:33:33 / 修改时间：17:34:07" itemprop="dateCreated datePublished" datetime="2018-12-18T17:33:33+08:00">2018-12-18</time>
+              <time title="创建时间：2019-01-10 19:27:43 / 修改时间：19:27:53" itemprop="dateCreated datePublished" datetime="2019-01-10T19:27:43+08:00">2019-01-10</time>
             
 
             
@@ -1542,7 +1538,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">346</span>
+                <span title="本文字数">437</span>
               
 
               
@@ -1578,7 +1574,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (i&lt; nums.length &amp;&amp; nums[i] == val)&#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(i&lt; nums.length) &#123;</span><br><span class="line">            nums[pos++] = nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">validMountainArray</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(A.length &lt; <span class="number">3</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>,j = A.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; A.length - <span class="number">1</span> &amp;&amp; A[i] &lt; A[i+ <span class="number">1</span>])&#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(j &gt; <span class="number">0</span> &amp;&amp; A[j] &lt; A[j-<span class="number">1</span>])&#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i != <span class="number">0</span> &amp;&amp; i != A.length -<span class="number">1</span> &amp;&amp; i == j;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1631,7 +1627,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/13/119-杨辉三角II/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/09/849-到最近的人的最大距离/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1650,8 +1646,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/13/119-杨辉三角II/" itemprop="url">
-                  LeetCode-"119.杨辉三角II"
+                <a class="post-title-link" href="/2019/01/09/849-到最近的人的最大距离/" itemprop="url">
+                  LeetCode-"849.到最近的人的最大距离"
                 </a>
               
             
@@ -1677,7 +1673,7 @@
                 
               
 
-              <time title="创建时间：2018-12-13 19:47:36 / 修改时间：19:47:50" itemprop="dateCreated datePublished" datetime="2018-12-13T19:47:36+08:00">2018-12-13</time>
+              <time title="创建时间：2019-01-09 13:50:56 / 修改时间：13:51:58" itemprop="dateCreated datePublished" datetime="2019-01-09T13:50:56+08:00">2019-01-09</time>
             
 
             
@@ -1709,7 +1705,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">531</span>
+                <span title="本文字数">719</span>
               
 
               
@@ -1745,7 +1741,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(<span class="number">1</span>);</span><br><span class="line">    list.add(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span>(rowIndex-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        Integer last = <span class="number">0</span>;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;(list.size() + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            Integer integer = list.get(i);</span><br><span class="line">            res.add(last + integer);</span><br><span class="line">            last = integer;</span><br><span class="line">        &#125;</span><br><span class="line">        res.add(last);</span><br><span class="line">        list = res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDistToClosest</span><span class="params">(<span class="keyword">int</span>[] seats)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> start = <span class="number">0</span>,end = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; seats.length;i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(seats[i] == <span class="number">0</span>) &#123;</span><br><span class="line">            start = i;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">while</span> (i &lt; seats.length &amp;&amp; seats[i] == <span class="number">0</span>) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            end = i - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(start == <span class="number">0</span> || end == seats.length-<span class="number">1</span>)&#123;</span><br><span class="line">                temp =  end - start+<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                temp = (end - start) / <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(temp &gt; res) &#123;</span><br><span class="line">                res = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1798,7 +1794,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2018/12/12/832-翻转图像/">
+    <link itemprop="mainEntityOfPage" href="http://www.sy0709.com/2019/01/08/674-最长连续递增序列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Juxian Yu">
@@ -1817,8 +1813,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/12/832-翻转图像/" itemprop="url">
-                  LeetCode-"832.翻转图像"
+                <a class="post-title-link" href="/2019/01/08/674-最长连续递增序列/" itemprop="url">
+                  LeetCode-"674.最长连续递增序列"
                 </a>
               
             
@@ -1844,7 +1840,7 @@
                 
               
 
-              <time title="创建时间：2018-12-12 21:06:42 / 修改时间：21:07:19" itemprop="dateCreated datePublished" datetime="2018-12-12T21:06:42+08:00">2018-12-12</time>
+              <time title="创建时间：2019-01-08 20:30:54 / 修改时间：20:31:19" itemprop="dateCreated datePublished" datetime="2019-01-08T20:30:54+08:00">2019-01-08</time>
             
 
             
@@ -1876,7 +1872,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">312</span>
+                <span title="本文字数">390</span>
               
 
               
@@ -1912,7 +1908,7 @@
       
         
           
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[][] flipAndInvertImage(<span class="keyword">int</span>[][] A) &#123;</span><br><span class="line">    <span class="keyword">int</span> [][] res = <span class="keyword">new</span> <span class="keyword">int</span>[A.length][A[<span class="number">0</span>].length];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; A[i].length; j++) &#123;</span><br><span class="line">            res[i][j] = <span class="number">1</span> - A[i][A[i].length - j - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLengthOfLCIS</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length;) &#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        i++;</span><br><span class="line">        <span class="keyword">while</span>(i&lt; nums.length &amp;&amp; nums[i] &gt; nums[i - <span class="number">1</span>])&#123;</span><br><span class="line">            count ++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(count &gt; res)&#123;</span><br><span class="line">            res = count;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1954,7 +1950,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1997,7 +1993,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2071,7 +2067,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2083,7 +2079,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">58k</span>
+    <span title="站点总字数">65k</span>
   
 
   
@@ -2092,7 +2088,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">53 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
   
 </div>
 
