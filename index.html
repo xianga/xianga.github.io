@@ -341,9 +341,13 @@
                 
               
 
-              <time title="创建时间：2019-03-30 00:08:45" itemprop="dateCreated datePublished" datetime="2019-03-30T00:08:45+08:00">2019-03-30</time>
+              <time title="创建时间：2019-03-30 00:08:45 / 修改时间：00:12:07" itemprop="dateCreated datePublished" datetime="2019-03-30T00:08:45+08:00">2019-03-30</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -369,7 +373,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.6k</span>
+                <span title="本文字数">2.4k</span>
               
 
               
@@ -420,7 +424,7 @@
 <li>http模块,增大keepalive_requests<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">http&#123;</span><br><span class="line">    keepalive_requests 50000</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">keepalive_requests指令用于设置一个keep-alive连接上可以服务的请求的最大数量，当最大请求数量达到时，连接被关闭。默认是100。这个参数的真实含义，是指一个keep alive建立之后，nginx就会为这个连接设置一个计数器，记录这个keep alive的长连接上已经接收并处理的客户端请求的数量。如果达到这个参数设置的最大值时，则nginx会强行关闭这个长连接，逼迫客户端不得不重新建立新的长连接。  </span><br><span class="line"></span><br><span class="line">大多数情况下当QPS(每秒请求数)不是很高时，默认值100凑合够用。但是，对于一些QPS比较高（比如超过10000QPS，甚至达到30000,50000甚至更高) 的场景，默认的100就显得太低。</span><br><span class="line">简单计算一下，QPS=10000时，客户端每秒发送10000个请求(通常建立有多个长连接)，每个连接只能最多跑100次请求，意味着平均每秒钟就会有100个长连接因此被nginx关闭。同样意味着为了保持QPS，客户端不得不每秒中重新新建100个连接。因此，就会发现有大量的TIME_WAIT的socket连接(即使此时keep alive已经在client和nginx之间生效)。因此对于QPS较高的场景，非常有必要加大这个参数，以避免出现大量连接被生成再抛弃的情况，减少TIME_WAIT。</span><br><span class="line">- upstream模块，保持长连接个数</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>upstream ytms_cloud_server {<br>    server   10.200.110.210:9301  weight=1 max_fails=5 fail_timeout=10s;<br>    server   10.200.110.216:9301  weight=1 max_fails=5 fail_timeout=10s;<br>    server   10.200.110.217:9301  weight=1 max_fails=5 fail_timeout=10s;<br>    keepalive 16;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- server模块，使用长连接</span><br></pre></td></tr></table></figure></p>
+<p>upstream ytms_cloud_server {<br>    keepalive 16;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- server模块，使用长连接</span><br></pre></td></tr></table></figure></p>
 <p>server {<br>    proxy_http_version 1.1;<br>    proxy_set_header Connection “”;<br>}<br><code>`</code></p>
 <h5 id="对LoadRunner使用的优化，设置并发请求的间隔时间"><a href="#对LoadRunner使用的优化，设置并发请求的间隔时间" class="headerlink" title="对LoadRunner使用的优化，设置并发请求的间隔时间"></a>对LoadRunner使用的优化，设置并发请求的间隔时间</h5><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>优化后，LoadRunner压测可以稳定在2000TPS,nginx服务器的TIME_WAIT个数稳定在设置的最高值5000；虽然通过了压测，但是Nginx对LoadRunner压测过程产生大量TIME_WAIT的问题还是没有解决。</p>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.cnblogs.com/pgf622/p/9109521.html" target="_blank" rel="noopener">JMETER压力测试报错:JAVA.NET.BINDEXCEPTION: ADDRESS ALREADY IN USE: CONNECT</a><br><a href="https://m690.com/archives/1149/" target="_blank" rel="noopener">loadrunner 压测时的频率控制</a><br><a href="http://www.blogjava.net/xingcyx/archive/2006/12/28/90498.html" target="_blank" rel="noopener">谈谈LOADRUNNER中PACING的设置</a><br><a href="https://lanjingling.github.io/2016/06/11/nginx-https-keepalived-youhua/" target="_blank" rel="noopener">nginx优化</a><br><a href="https://lanjingling.github.io/2016/02/27/nginx-tomcat-time-wait/" target="_blank" rel="noopener">Nginx反向代理tomcat，两端TIME_WAIT优化</a></p>
@@ -2120,7 +2124,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">86k</span>
+    <span title="站点总字数">85k</span>
   
 
   
